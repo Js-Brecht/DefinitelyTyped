@@ -287,7 +287,7 @@ declare namespace NodeIPC {
          * if set, it represents the maximum number of retries after each disconnect before giving up
          * and completely killing a specific connection
          */
-        maxRetries: boolean;
+        maxRetries: false | number;
         /**
          * Default: false
          * Defaults to false meaning clients will continue to retry to connect to servers indefinitely at the retry interval.
@@ -295,7 +295,7 @@ declare namespace NodeIPC {
          * If set to true in real time it will immediately stop trying to connect regardless of maxRetries.
          * If set to 0, the client will NOT try to reconnect
          */
-        stopRetrying: boolean;
+        stopRetrying: boolean | number;
         /**
          * Default: true
          * Defaults to true meaning that the module will take care of deleting the IPC socket prior to startup.
